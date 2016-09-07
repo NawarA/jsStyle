@@ -62,7 +62,8 @@ new tellMeTheDifference( 'this is an argument value' );
 ### arrow expressions
 ```javascript
 const sum = ( a, b )=> a + b;
-console.log( sum( 1 + 9 ) ); // returns 10
+
+sum( 1 + 9 ); // returns 10
 ```
 ### arrow vs function usage
 Always use function. Only use arrow functions if you intend to make the function inherit context.
