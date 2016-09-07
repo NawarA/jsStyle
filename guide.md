@@ -29,10 +29,10 @@ var c = 'string'; // use var when you cannot use let or const
 ```
 ### functions
 ```javascript
-function name( arg1 = 'default arg value', arg2 = {}, arg3 = false, ...restOfTheArgs ) {
+function name( arg1 = 'default', arg2 = {}, arg3 = false, ...restOfTheArgs ) {
     return [ arg1, arg2, arg3, restOfTheArgs ];
 }
-name( undefined, undefined, null, 1, 2, 3, 4, 5, 'abc' );
+name( undefined, undefined, null, 1, 2, 3, 'abc' ); // returns [ 'default', {}, null, 1, 2, 3, 'abc' ]
 ```
 ### arrow functions
 ```javascript
@@ -57,13 +57,12 @@ function tellMeTheDifference( someArg ) {
     normalFunc();
     arrowFunc();
 }
-new tellMeTheDifference( 'this is an argument value' );
+new tellMeTheDifference('this is a default argument value');
 ```
 ### arrow expressions
 ```javascript
 const sum = ( a, b )=> a + b;
-
-sum( 1 + 9 ); // returns 10
+sum( 1, 9 ); // returns 10
 ```
 ### arrow vs function usage
 Always use function. Only use arrow functions if you intend to make the function inherit context.
@@ -165,9 +164,13 @@ This causes weird bugs if you screw it up.
 
 ## Cloning
 ### Object
-```let clone = Object.assign( {}, obj );```
+```javascript
+let clone = Object.assign( {}, obj );
+```
 ### Array
-```let clone = array.slice();```
+```javascript 
+let clone = array.slice();
+```
 ### Primitives
 ```javascript
 let primitive = 1;
@@ -192,3 +195,12 @@ let string = number + ''; // string.constructor is String
 ## JSON
 ### Stringify
 Remember, JSON.stringify randomly creates a string from an object. Do not expect the same string to be created through the serialization process. You'll need a plugin for that, such as json-stable-stringify on npm.
+
+# Archicture
+Use finite-state machines
+```javascript
+const stateMachine = {
+    queue: [],
+    
+};
+```
