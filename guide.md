@@ -36,7 +36,7 @@ name( undefined, undefined, null, 1, 2, 3, 4, 5, 'abc' );
 ```
 ### arrow functions
 ```javascript
-function tellMeTheDifference( someArg = 'this is a default argument value' ) {
+function tellMeTheDifference( someArg ) {
     this.property = 'correct context';
     
     let arrowFunc = ()=> {
@@ -57,7 +57,7 @@ function tellMeTheDifference( someArg = 'this is a default argument value' ) {
     normalFunc();
     arrowFunc();
 }
-new tellMeTheDifference();
+new tellMeTheDifference( 'this is an argument value' );
 ```
 ### arrow expressions
 ```javascript
