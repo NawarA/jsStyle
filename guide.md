@@ -95,7 +95,15 @@ if ( a === true ) {
 ```
 ## loops
 ### Array
+#### accessing an element
+```javascript
+let array = [ 1, 2, 3 ];
+array[ array.length ] = 4;
+//is better than
+array.push(4);
+```
 #### when iteration order matters
+
 ```javascript
 /*
     the for loop is fast and easy to read.
