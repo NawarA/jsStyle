@@ -5,6 +5,7 @@ If you'd like to make a change to it, then propose it to the group and lets make
 - [The fundementals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 - [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 - [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [The Node.js event Loop and timers](https://github.com/nodejs/node/blob/master/doc/topics/event-loop-timers-and-nexttick.md)
 - [Memory managment / Garbage collector](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management)
 
 Read and memorize this.
